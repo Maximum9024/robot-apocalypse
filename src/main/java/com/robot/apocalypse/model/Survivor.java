@@ -5,12 +5,15 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
 import javax.persistence.OneToOne;
-
+import javax.persistence.Table;
 import org.springframework.beans.factory.annotation.Value;
 
 import lombok.Data;
 
+@Entity
+@Table(name="survivor")
 @Data
 public class Survivor {
 
