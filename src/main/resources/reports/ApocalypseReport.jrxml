@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ApocalypseReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2bccea77-ecc3-4f36-97a7-554c137eff4b">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="model" class="java.lang.String"/>
+	<field name="serialNumber" class="java.lang.String"/>
+	<field name="manufacturedDate" class="java.lang.String"/>
+	<field name="category" class="java.lang.String"/>
+	<title>
+		<band height="81" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="81" backcolor="#6211D4" uuid="d37fe004-34c6-47cd-b10b-d48e615fe144"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="162" y="25" width="230" height="30" forecolor="#FFFFFF" uuid="73031d5e-3b5b-4b1c-ab1b-8a6c4ac3b45b"/>
+				<textElement>
+					<font fontName="Impact" size="20"/>
+				</textElement>
+				<text><![CDATA[Apocalypse Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="479" y="0" width="76" height="76" uuid="e8892fd6-90bb-4410-a992-b7d1bf1046c2"/>
+				<imageExpression><![CDATA["/src/main/resources/static/tesla.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="191" y="7" width="172" height="30" uuid="366ccd24-4f3d-426c-8335-3d828e2ae8a7"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[List of Robots]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="41a26889-6037-4425-9634-962ec2eb04cc"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="100" height="30" uuid="e20f4edb-f4f9-4c04-ace5-64fd48836405"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serial Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="113" height="30" uuid="75c819b5-8b50-43d0-91b7-ea5f3ff48cdb"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manufactured Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="100" height="30" uuid="4418f559-f11c-471e-a543-132aee168e64"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="bf537b44-56e0-47b6-9b43-e3a88a99face"/>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="30" uuid="e40876ea-1494-42db-b618-61b217633388"/>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="113" height="30" uuid="f8b37993-0e29-4791-b94d-ea5253762470"/>
+				<textFieldExpression><![CDATA[$F{manufacturedDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="100" height="30" uuid="ba07c42f-ca4b-4db7-abe7-12ee1460f620"/>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
