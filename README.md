@@ -22,6 +22,31 @@ request :
     },
     "inventory":["Ammunation","Drone","Food"]
 }
+request 2 :
+{
+    "id": 2426,
+    "name":"Grace",
+    "age":"24",
+    "gender":"female",
+    "lastLocation":{
+        "latitude":"-25.896401481051676",
+        "longitude":"28.11401579237846"
+    },
+    "inventory":["Food","Books","Cellpone"]
+}
+request 3 :{
+    "id": 2427,
+    "name":"Lucky",
+    "age":"24",
+    "gender":"male",
+    "lastLocation":{
+        "latitude":"-25.896401481051676",
+        "longitude":"28.11401579237846"
+    },
+    "inventory":["Laptop","Books","Car"]
+}
+
+
 
 #######################################################
 get list of all survivors
