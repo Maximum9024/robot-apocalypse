@@ -31,7 +31,7 @@ public class ReportService {
 
 	private static final String URL = "https://robotstakeover20210903110417.azurewebsites.net/robotcpu";
 	private static final String SOURCEFILE_ROBOT_LIST = "src/main/resources/reports/ApocalypseReport.jrxml";
-	private static final String SOURCEFILE_SURVIVOR_LIST = "src/main/resources/reports/ApocalypseReport.jrxml";
+	private static final String SOURCEFILE_SURVIVOR_LIST = "src/main/resources/reports/SurvivorReport.jrxml";
 
 	public List<Robot> getRobots() {
 		Robot[] robots = restTemplate.getForObject(URL, Robot[].class);
@@ -51,14 +51,14 @@ public class ReportService {
 	public byte[] survivorListPDFReport() throws FileNotFoundException, JRException {
 		CalculationUtil calculationUtil = new CalculationUtil();
 		List<Survivor> survivors = (List<Survivor>) survivorRepository.findAll();
-		String percentOfInfectedSurvivors = Double.toString(calculationUtil.percentOfInfectedSurvivors(survivors));
-		String percentOfNonInfectedSurvivors =Double.toString( calculationUtil.percentOfNonInfectedSurvivors(survivors));
+		String percentOfInfectedSurvivors = calculationUtil.percentOfInfectedSurvivors(survivors);
+		String percentOfNonInfectedSurvivors = calculationUtil.percentOfNonInfectedSurvivors(survivors);
 		List<Survivor> listOfInfectedSurvivors = calculationUtil.listOfInfectedSurvivors(survivors);
 		List<Survivor> listOfNonInfectedSurvivors = calculationUtil.listNonInfectedSurvivors(survivors);
 
 		HashMap<String, Object> map = new HashMap<String, Object>();
-        map.put("percentOfInfectedSurvivors", percentOfInfectedSurvivors);
-        map.put("percentOfNonInfectedSurvivors", percentOfNonInfectedSurvivors);
+        map.put("infectedSurvivors", percentOfInfectedSurvivors);
+        map.put("nonInfectedSurvivors", percentOfNonInfectedSurvivors);
 
         List<SurvivorList> survivorLists= new ArrayList<SurvivorList>();
         survivorLists.add(new SurvivorList());

@@ -11,9 +11,9 @@ public List<Survivor> listOfInfectedSurvivors(List<Survivor> survivorList);
     
 	public List<Survivor> listNonInfectedSurvivors(List<Survivor> survivorList);
     
-	public double percentOfInfectedSurvivors(List<Survivor> survivorList);
+	public String percentOfInfectedSurvivors(List<Survivor> survivorList);
     
-    public double  percentOfNonInfectedSurvivors(List<Survivor> survivorList);
+    public String  percentOfNonInfectedSurvivors(List<Survivor> survivorList);
     
     public List<Robot> listOfRobots(List<Robot> robotList);
     

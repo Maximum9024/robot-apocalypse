@@ -42,7 +42,7 @@ public final class CalculationUtil implements CalculationInterface {
 	}
 
 	@Override
-	public double percentOfInfectedSurvivors(List<Survivor> survivorList) {
+	public String percentOfInfectedSurvivors(List<Survivor> survivorList) {
 		  double percentOfInfectedSurvivors=0;
 		  List<Survivor> infectedSurvivors = new ArrayList<Survivor>();
 		  for(Survivor survivor : survivorList) {
@@ -52,15 +52,16 @@ public final class CalculationUtil implements CalculationInterface {
 				}
 			}
 		   
-		     
-		  percentOfInfectedSurvivors= (infectedSurvivors.size()/survivorList.size())*100;
+		     double infected=infectedSurvivors.size();
+		     double survivors=survivorList.size();
+		  percentOfInfectedSurvivors= (infected/survivors)*100;
 		  
 		  
-		return percentOfInfectedSurvivors;
+		return String.format("%.2f", percentOfInfectedSurvivors) +" %";
 	}
 
 	@Override
-	public double percentOfNonInfectedSurvivors(List<Survivor> survivorList) {
+	public String  percentOfNonInfectedSurvivors(List<Survivor> survivorList) {
 		 double percentOfNonInfectedSurvivors=0;
 		 List<Survivor> nonInfectedSurvivors = new ArrayList<Survivor>();
 		 for(Survivor survivor : survivorList) {
@@ -70,9 +71,11 @@ public final class CalculationUtil implements CalculationInterface {
 					nonInfectedSurvivors.add(survivor);
 				}
 			}
+		 double nonInfected=nonInfectedSurvivors.size();
+	     double survivors=survivorList.size();
 			
-		 percentOfNonInfectedSurvivors= (nonInfectedSurvivors.size()/survivorList.size())*100;
-		return percentOfNonInfectedSurvivors;
+		 percentOfNonInfectedSurvivors= (nonInfected/survivors)*100;
+		return String.format("%.2f",percentOfNonInfectedSurvivors)+" %";
 	}
 
 	@Override
