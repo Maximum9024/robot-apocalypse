@@ -9,9 +9,9 @@
 	<field name="manufacturedDate" class="java.lang.String"/>
 	<field name="category" class="java.lang.String"/>
 	<title>
-		<band height="81" splitType="Stretch">
+		<band height="102" splitType="Stretch">
 			<rectangle>
-				<reportElement x="0" y="0" width="555" height="81" backcolor="#6211D4" uuid="d37fe004-34c6-47cd-b10b-d48e615fe144"/>
+				<reportElement x="0" y="0" width="555" height="90" backcolor="#6211D4" uuid="d37fe004-34c6-47cd-b10b-d48e615fe144"/>
 			</rectangle>
 			<staticText>
 				<reportElement x="162" y="25" width="230" height="30" forecolor="#FFFFFF" uuid="73031d5e-3b5b-4b1c-ab1b-8a6c4ac3b45b"/>
@@ -20,23 +20,15 @@
 				</textElement>
 				<text><![CDATA[Apocalypse Report]]></text>
 			</staticText>
-			<image>
-				<reportElement x="479" y="0" width="76" height="76" uuid="e8892fd6-90bb-4410-a992-b7d1bf1046c2"/>
-				<imageExpression><![CDATA["/src/main/resources/static/tesla.jpeg"]]></imageExpression>
-			</image>
-		</band>
-	</title>
-	<pageHeader>
-		<band height="44" splitType="Stretch">
 			<staticText>
-				<reportElement x="191" y="7" width="172" height="30" uuid="366ccd24-4f3d-426c-8335-3d828e2ae8a7"/>
+				<reportElement x="200" y="60" width="100" height="30" forecolor="#FFFFFF" uuid="ddb68922-3eb7-4534-9462-1e5ff4a158fe"/>
 				<textElement>
-					<font size="16" isBold="true"/>
+					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[List of Robots]]></text>
 			</staticText>
 		</band>
-	</pageHeader>
+	</title>
 	<columnHeader>
 		<band height="36" splitType="Stretch">
 			<staticText>
@@ -70,7 +62,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="30" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="100" height="30" uuid="bf537b44-56e0-47b6-9b43-e3a88a99face"/>
 				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>

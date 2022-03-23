@@ -6,7 +6,9 @@ import java.util.List;
 import com.robot.apocalypse.model.Robot;
 import com.robot.apocalypse.model.Survivor;
 
-public class CalculationUtil implements CalculationInterface {
+public final class CalculationUtil implements CalculationInterface {
+	
+	
 
 	@Override
 	public List<Survivor> listOfInfectedSurvivors(List<Survivor> survivorList) {
