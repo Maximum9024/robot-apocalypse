@@ -25,6 +25,9 @@
 		<field name="flag" class="java.lang.Boolean">
 			<fieldDescription><![CDATA[flag]]></fieldDescription>
 		</field>
+		<field name="nonInfected" class="java.util.List">
+			<fieldDescription><![CDATA[nonInfected]]></fieldDescription>
+		</field>
 	</subDataset>
 	<subDataset name="list" uuid="1f97680f-9e31-4cb0-8651-25cc5eb8c393">
 		<queryString>
@@ -51,12 +54,6 @@
 	</field>
 	<field name="flag" class="java.lang.Boolean">
 		<fieldDescription><![CDATA[flag]]></fieldDescription>
-	</field>
-	<field name="infected" class="java.util.List">
-		<fieldDescription><![CDATA[infected]]></fieldDescription>
-	</field>
-	<field name="nonInfected" class="java.util.List">
-		<fieldDescription><![CDATA[nonInfected]]></fieldDescription>
 	</field>
 	<columnHeader>
 		<band height="33">
@@ -90,34 +87,34 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="193" splitType="Stretch">
+		<band height="210" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<frame>
-				<reportElement x="0" y="0" width="555" height="113" uuid="8068cbd7-e8cb-4e02-95ed-049a2121cbe1"/>
+				<reportElement x="-10" y="-31" width="555" height="61" uuid="8068cbd7-e8cb-4e02-95ed-049a2121cbe1"/>
 				<textField>
-					<reportElement x="0" y="0" width="80" height="30" uuid="9db889b8-e749-45f5-857e-e3a6e1ddd81e"/>
+					<reportElement x="0" y="30" width="80" height="30" uuid="9db889b8-e749-45f5-857e-e3a6e1ddd81e"/>
 					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="80" y="0" width="100" height="30" uuid="005dd9aa-313d-4249-b329-adbe7b1aa7f1"/>
+					<reportElement x="80" y="30" width="100" height="30" uuid="005dd9aa-313d-4249-b329-adbe7b1aa7f1"/>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="180" y="0" width="60" height="30" uuid="893be75a-61b8-4c35-b8b9-1ca5742894af">
+					<reportElement x="180" y="30" width="60" height="30" uuid="893be75a-61b8-4c35-b8b9-1ca5742894af">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6943a587-381c-4da3-95c4-1bbb2d2163cc"/>
 					</reportElement>
 					<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="240" y="-3" width="80" height="30" uuid="ae6fd574-991d-484a-8046-561426afee9e"/>
+					<reportElement x="240" y="30" width="80" height="30" uuid="ae6fd574-991d-484a-8046-561426afee9e"/>
 					<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="320" y="0" width="70" height="30" uuid="b2fb230d-80fd-4667-9670-ae8f759afbde"/>
+					<reportElement x="320" y="30" width="70" height="30" uuid="b2fb230d-80fd-4667-9670-ae8f759afbde"/>
 					<textFieldExpression><![CDATA[$F{flag}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="390" y="-3" width="165" height="30" uuid="d8b998b8-8fa9-4b95-b015-54f3fb95a151"/>
+					<reportElement x="390" y="30" width="165" height="30" uuid="d8b998b8-8fa9-4b95-b015-54f3fb95a151"/>
 					<textFieldExpression><![CDATA["latitude :"+$F{lastLocation}.getLatitude() +", longitude :"+$F{lastLocation}.getLongitude()]]></textFieldExpression>
 				</textField>
 			</frame>

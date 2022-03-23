@@ -22,6 +22,7 @@ public final class ReportUtil {
 		JasperReport compileReport = JasperCompileManager.compileReport(
 				      new FileInputStream(sourceFile));
 		JasperPrint report=JasperFillManager.fillReport(compileReport, map, beanCollectionDataSource);
+		            
 	    byte[] data=JasperExportManager.exportReportToPdf(report);	
       
 	    return data;
