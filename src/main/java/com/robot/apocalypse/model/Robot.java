@@ -1,5 +1,6 @@
 package com.robot.apocalypse.model;
 
+
 import lombok.Data;
 
 @Data

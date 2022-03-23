@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.robot.apocalypse.model.Location;
 import com.robot.apocalypse.model.Survivor;
 import com.robot.apocalypse.service.UpdateService;
 
